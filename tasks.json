@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Task Analyzer",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-o", "task_analyzer",
+        "main.c",
+        "task_manager.c",
+        "tasks/cpu_task.c",
+        "tasks/io_task.c",
+        "utils/timer.c",
+        "-I", "tasks",
+        "-I", "utils",
+        "-lpthread"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
